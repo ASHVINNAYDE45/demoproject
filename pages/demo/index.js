@@ -56,11 +56,19 @@ function StopWatch() {
   };
 
   return (
-    <Container style={{ marginTop: "120px" }}>
+    <Container>
       <Row>
         <Col>
-          <div>
-            <h2>Entry</h2>
+          <div
+            style={{
+              marginTop: "40px",
+              border: "1px solid #ccc",
+              borderRadius: "100px",
+              padding: "200px",
+           
+            }}
+          >
+            <h2> </h2>
             <ul>
               {flaggedTimes.map((time, index) => (
                 <li key={index}>{time}</li>
@@ -68,31 +76,36 @@ function StopWatch() {
             </ul>
           </div>
         </Col>
-        
 
-        
-        <Col >
-          
-            <div>
-              <span style={{ fontSize: "30px" }} className="digit" id="mil">
-                {timerString}
-              </span>
-            </div>
-            <div>
-              <Button variant="primary" onClick={handleFlag}>
-                Flag
-              </Button>{" "}
-              <Button variant="success" type="submit" onClick={handleStart}>
-                Start
-              </Button>{" "}
-              <Button variant="info" type="submit" onClick={handleReset}>
-                Reset
-              </Button>{" "}
-              <Button variant="danger" type="submit" onClick={handleStop}>
-                Stop
-              </Button>{" "}
-            </div>
-          
+        <Col
+          style={{
+            marginTop: "40px",
+            border: "2px solid #BF833F",
+            borderRadius: "800px",
+            padding: "20px",
+            textAlign: "center",
+            
+          }}
+        >
+          <div>
+            <span style={{ fontSize: "30px" }} className="digit" id="mil">
+              {timerString}
+            </span>
+          </div>
+          <div>
+            <Button variant="primary" onClick={handleFlag}>
+              Flag
+            </Button>{" "}
+            <Button variant="success" type="submit" onClick={handleStart}>
+              Start
+            </Button>{" "}
+            <Button variant="info" type="submit" onClick={handleReset}>
+              Reset
+            </Button>{" "}
+            <Button variant="danger" type="submit" onClick={handleStop}>
+              Stop
+            </Button>{" "}
+          </div>
         </Col>
       </Row>
     </Container>
