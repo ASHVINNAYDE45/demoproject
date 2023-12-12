@@ -91,18 +91,18 @@ function StopWatch() {
           <div>
             {stopwatchState === "running" ? (
               <Button variant="danger" onClick={handleStop}>
-                Stop
+                ⚪
               </Button>
             ) : (
               <Button variant="success" onClick={handleStart}>
-                Start
+                ⏩
               </Button>
             )}{" "}
             <Button variant="info" onClick={handleReset}>
-              Reset
+            ⭐
             </Button>{" "}
             <Button variant="primary" onClick={handleFlag}>
-              Flag
+            🏁
             </Button>{" "}
           </div>
         </Col>
