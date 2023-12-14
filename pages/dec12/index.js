@@ -41,10 +41,12 @@ function ApiCalling() {
   };
   useEffect(() => {
     const handleOnline = () => {
-      setIsOnline(true);
+     alert("online");
+     setIsOnline(true);
     };
 
     const handleOffline = () => {
+        alert("offline");
       setIsOnline(false);
     };
 
@@ -93,14 +95,14 @@ function ApiCalling() {
           ))}
         </Pagination>
 
-        <h1>{isOnline ? "Online" : "Offline"}</h1>
-        {isOnline ? (
+         <h1>{isOnline ? "Online" : "Offline"}</h1> 
+        {/* {isOnline ? (
           <p>You are currently online and can view content.</p>
         ) : (
           <p>
             You are currently offline. Please check your internet connection.
           </p>
-        )}
+        )} */}
       </center>
     </>
   );
